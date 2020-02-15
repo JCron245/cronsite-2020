@@ -1,0 +1,54 @@
+.navbar {
+	background-color: var(--header-background);
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+	.navbar-brand {
+		font-size: 1.3rem;
+		color: var(--header-link);
+		&:visited {
+			color: var(--header-link);
+		}
+		&:hover {
+			color: var(--header-link-hover);
+		}
+	}
+	.navbar-nav > .nav-link {
+		align-items: center;
+		display: flex;
+		font-size: 1.1rem;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0 !important;
+		color: var(--header-link);
+		border-bottom: 1px solid var(--header-link);
+		margin: 0 0.5rem;
+		&:hover {
+			color: var(--header-link-hover);
+			border-color: var(--header-link-hover);
+			.dog-svg {
+				fill: var(--header-link-hover);
+			}
+		}
+		&:focus {
+			color: var(--header-link-hover);
+			outline: none;
+		}
+	}
+	.navbar-toggler {
+		background-color: var(--accent);
+		border-color: var(--accent);
+	}
+	.nav-link-btn {
+		background-color: transparent;
+		border: none;
+		&:focus {
+			color: var(--header-link-hover);
+			outline: none !important;
+		}
+	}
+}
+
+.header-icon {
+	height: 1rem;
+	margin-right: 0.5rem;
+	width: 1rem;
+}

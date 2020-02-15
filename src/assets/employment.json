@@ -1,0 +1,54 @@
+{
+	"jobs": [
+		{
+			"name": "Elevated Software",
+			"title": "Senior Developer",
+			"startDate": "06/2017",
+			"endDate": "Present",
+			"infoList": [
+				"Self Bag Tagging Software Deployed to Denver International Airport",
+				"Automated Gate System Software Deployed to Tampa International Airport",
+				"Multi Tenant Admin Portal Software",
+				"Restfull API's",
+				"Technologies: Javascript, Typescript, Angular, React, Java"
+			]
+		},
+		{
+			"name": "Blndspt",
+			"title": "Full Stack Engineer - Dev Lead",
+			"startDate": "10/2016",
+			"endDate": "Present",
+			"infoList": [
+				"Contracted ADA Remediation for MasterCard In Control Application",
+				"Contracted ADA Remediation for Clover POS Systems",
+				"Contracted mobile rebuild for Team USA Mobile Applications",
+				"ADA/Section 508 Compliance",
+				"Migration of application from AngularJS to Angular 2",
+				"Technologies: Javascript, Typescript, React, React Native, Angular, Java, GWT, JSP"
+			]
+		},
+		{
+			"name": "wreetco",
+			"title": "Application Engineer",
+			"startDate": "03/2015",
+			"endDate": "08/2016",
+			"infoList": [
+				"Design, development and deployment of mobile applications and linux servers",
+				"Writing web and native apps using Ruby on Rails and MEAN",
+				"Custom hardware design utilizing Raspberry Pi's, Arudino microcontrollers, and sensors",
+				"Technologies: Cordova, Ionic, AngularJS, Apache, Passenger, and MongoDB"
+			]
+		},
+		{
+			"name": "American Financing Corporation",
+			"title": "Web Developer",
+			"startDate": "06/2012",
+			"endDate": "06/2014",
+			"infoList": [
+				"Developed public and internal web applications",
+				"Worked closely with marketing team to improve SEO and website usability",
+				"Technologies: PHP, Javascript"
+			]
+		}
+	]
+}

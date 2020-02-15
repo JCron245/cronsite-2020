@@ -1,0 +1,25 @@
+{
+	"schools": [
+		{
+			"name": "Metropolitan State University of Denver",
+			"degree": "Bachelor of Science in Computer Science",
+			"startDate": "08/2012",
+			"endDate": "05/2016",
+			"infoList": [
+				"Graduated with a BS in Computer Science and a minor in mathematics",
+				"Founded and ran the MSU Computer Club while attending"
+			]
+		},
+		{
+			"name": "Dixie State University",
+			"degree": "Associate of Applied Science",
+			"startDate": "08/2010",
+			"endDate": "05/2012",
+			"infoList": [
+				"Graduated with an Associate of Applied Science",
+				"Spent my time focusing on Biology and Computer Science studies",
+				"Competed in ACM competition in 2012"
+			]
+		}
+	]
+}
