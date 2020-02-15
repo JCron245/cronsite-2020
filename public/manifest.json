@@ -1,8 +1,9 @@
 {
-  "name": "Jon Cornwell Resume",
+	"name": "Jon Cornwell's Resume",
+	"short_name": "Jon Cornwell's Resume",
   "theme_color": "#00bcab",
   "background_color": "#222222",
-  "display": "browser",
+  "display": "standalone",
   "Scope": "/",
   "start_url": ".",
   "icons": [
