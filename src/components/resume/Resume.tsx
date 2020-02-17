@@ -74,7 +74,7 @@ const Resume: FC = (): ReactElement => {
 								{job.infoList.map((jobInfo, index) => {
 									return (
 										<li key={`jobinfo-${jobName}-${index}`}>
-											<PlusSquare aria-hidden={true} className={'icon'} />
+											<PlusSquare aria-hidden={true} className='icon' />
 											{jobInfo}
 										</li>
 									);
@@ -109,7 +109,7 @@ const Resume: FC = (): ReactElement => {
 								{school.infoList.map((schoolInfo, index) => {
 									return (
 										<li key={`schoolInfo-${schoolName}-${index}`}>
-											<PlusSquare aria-hidden={true} className={'icon'} />
+											<PlusSquare aria-hidden={true} className='icon' />
 											{schoolInfo}
 										</li>
 									);

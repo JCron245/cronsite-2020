@@ -39,12 +39,10 @@ const initTheme = (): string => {
 	if (lsTheme !== null) {
 		return lsTheme;
 	}
-	if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-		return 'dark';
-	}
 	if (window.matchMedia('(prefers-color-scheme: light)').matches) {
 		return 'light';
 	}
+	// Either they have chosen dark as a theme or they haven't chosen a theme. So dark mode it is :)
 	return 'dark';
 };
 
@@ -69,6 +67,7 @@ const ThemeControl = () => {
 	return (
 		<button
 			className={`theme-btn ${isDark ? ' dark' : ' light'}`}
+			title={isDark ? 'enable light theme mode' : 'enable dark theme mode'}
 			aria-label={isDark ? 'enable light theme mode' : 'enable dark theme mode'}
 			onClick={() => setTheme(isDark ? 'light' : 'dark')}>
 			{isDark ? <Sunrise className="theme-icon" /> : <Sunset className="theme-icon" />}
