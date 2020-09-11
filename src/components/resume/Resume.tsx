@@ -6,15 +6,69 @@ import Col from 'react-bootstrap/Col';
 import { PlusSquare } from 'react-feather';
 import './Resume.scss';
 
-const Resume: FC = (): ReactElement => {
+interface InfoSectionArray {
+	name: string;
+	title: string;
+	endDate: string;
+	startDate: string;
+	infoList: string[];
+}
+
+interface InfoSection {
+	arr: InfoSectionArray[];
+	title: string;
+}
+
+export const Resume: FC = (): ReactElement => {
+	const InfoSection: FC<InfoSection> = (props): ReactElement => {
+		const { arr, title } = props;
+		return (
+			<>
+				<Row className={`${title}-title`}>
+					<Col>
+						<h2 className="page-header">{title}</h2>
+					</Col>
+				</Row>
+				{arr.map((item, index) => {
+					const infoTitle = item.name.replace(/\s+/g, '-');
+					return (
+						<Row className={`${title}-body`} key={`${infoTitle}-${index}`}>
+							<Col className={`${title}-head`} sm={4} xs={12}>
+								<h3 className="page-sub-header" id={`${infoTitle}-${index}`}>
+									{item.name}
+								</h3>
+								<p>{item.title}</p>
+								<p>
+									{item.startDate} - {item.endDate}
+								</p>
+							</Col>
+							<Col className={`${title}-info`} sm={8} xs={12}>
+								<ul className={`${title}-list list`} aria-labelledby={`${infoTitle}-${index}`}>
+									{item.infoList.map((itemInfo: string, index: number) => {
+										return (
+											<li key={`schoolInfo-${infoTitle}-${index}`}>
+												<PlusSquare aria-hidden={true} className="icon" />
+												<span>{itemInfo}</span>
+											</li>
+										);
+									})}
+								</ul>
+							</Col>
+						</Row>
+					);
+				})}
+			</>
+		);
+	};
+
 	return (
 		<main className="resume container">
 			<h1 className="sr-only">Jon Cornwell's Resume</h1>
+			{/* Personal Info */}
 			<Row>
 				<Col>
-					{/* Personal Info */}
 					<address className="info">
-						<p>1740 Depew St. Edgewater, CO</p>
+						<p>Denver, CO</p>
 						<a className="info-link" target="_blank" rel="noopener noreferrer" href="mailto:jonnmb@gmail.com">
 							jonnmb@gmail.com
 						</a>
@@ -49,78 +103,10 @@ const Resume: FC = (): ReactElement => {
 					</ul>
 				</Col>
 			</Row>
-
-			{/* {/* Employment History */}
-			<Row className="employment-title">
-				<Col>
-					<h2 className="page-header">Employment History</h2>
-				</Col>
-			</Row>
-			{Employment.jobs.map((job, index) => {
-				const jobName = job.name.replace(/\s+/g, '-');
-				return (
-					<Row className="employment-body" key={`${jobName}-${index}`}>
-						<Col className="employment-head" sm={4} xs={12}>
-							<h3 className="page-sub-header" id={`${jobName}-${index}`}>
-								{job.name}
-							</h3>
-							<p>{job.title}</p>
-							<p>
-								{job.startDate} - {job.endDate}
-							</p>
-						</Col>
-						<Col className="employment-info" sm={8} xs={12}>
-							<ul className="jobs-list list" aria-labelledby={`${jobName}-${index}`}>
-								{job.infoList.map((jobInfo, index) => {
-									return (
-										<li key={`jobinfo-${jobName}-${index}`}>
-											<PlusSquare aria-hidden={true} className='icon' />
-											{jobInfo}
-										</li>
-									);
-								})}
-							</ul>
-						</Col>
-					</Row>
-				);
-			})}
-
+			{/* Employment */}
+			<InfoSection arr={Employment.jobs} title="employment"></InfoSection>
 			{/* Education */}
-			<Row className="education-title">
-				<Col>
-					<h2 className="page-header">Education</h2>
-				</Col>
-			</Row>
-			{Education.schools.map((school, index) => {
-				const schoolName = school.name.replace(/\s+/g, '-');
-				return (
-					<Row className="education-body" key={`${schoolName}-${index}`}>
-						<Col className="education-head" sm={4} xs={12}>
-							<h3 className="page-sub-header" id={`${schoolName}-${index}`}>
-								{school.name}
-							</h3>
-							<p>{school.degree}</p>
-							<p>
-								{school.startDate} - {school.endDate}
-							</p>
-						</Col>
-						<Col className="education-info" sm={8} xs={12}>
-							<ul className="education-list list" aria-labelledby={`${schoolName}-${index}`}>
-								{school.infoList.map((schoolInfo, index) => {
-									return (
-										<li key={`schoolInfo-${schoolName}-${index}`}>
-											<PlusSquare aria-hidden={true} className='icon' />
-											{schoolInfo}
-										</li>
-									);
-								})}
-							</ul>
-						</Col>
-					</Row>
-				);
-			})}
+			<InfoSection arr={Education.schools} title="education"></InfoSection>
 		</main>
 	);
 };
-
-export default Resume;

@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import { GitHub, Linkedin, PenTool } from 'react-feather';
 import './Header.scss';
 
-const Header: FC = (): ReactElement => {
+export const Header: FC = (): ReactElement => {
 	return (
 		<Navbar expand="lg">
 			<Navbar.Brand href="/">Jon Cornwell</Navbar.Brand>
@@ -29,5 +29,3 @@ const Header: FC = (): ReactElement => {
 		</Navbar>
 	);
 };
-
-export default Header;

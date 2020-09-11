@@ -2,7 +2,7 @@
 	"schools": [
 		{
 			"name": "Metropolitan State University of Denver",
-			"degree": "Bachelor of Science in Computer Science",
+			"title": "Bachelor of Science in Computer Science",
 			"startDate": "08/2012",
 			"endDate": "05/2016",
 			"infoList": [
@@ -12,7 +12,7 @@
 		},
 		{
 			"name": "Dixie State University",
-			"degree": "Associate of Applied Science",
+			"title": "Associate of Applied Science",
 			"startDate": "08/2010",
 			"endDate": "05/2012",
 			"infoList": [

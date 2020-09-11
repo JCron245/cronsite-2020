@@ -1,23 +1,34 @@
 {
 	"jobs": [
 		{
+			"name": "Charter Communications",
+			"title": "Software Developer IV",
+			"startDate": "06/06/20",
+			"endDate": "Present",
+			"infoList": [
+				"Enroll/Activation Team",
+				"Front end maintenance and new feature work",
+				"Technologies: Javascript, Typescript, Angular, AngularJS, NGRX"
+			]
+		},
+		{
 			"name": "Elevated Software",
 			"title": "Senior Developer",
 			"startDate": "06/2017",
-			"endDate": "Present",
+			"endDate": "05/2020",
 			"infoList": [
 				"Self Bag Tagging Software Deployed to Denver International Airport",
 				"Automated Gate System Software Deployed to Tampa International Airport",
 				"Multi Tenant Admin Portal Software",
 				"Restfull API's",
-				"Technologies: Javascript, Typescript, Angular, React, Java"
+				"Technologies: Javascript, Typescript, Angular, React, Java, Redux"
 			]
 		},
 		{
 			"name": "Blndspt",
 			"title": "Full Stack Engineer - Dev Lead",
 			"startDate": "10/2016",
-			"endDate": "Present",
+			"endDate": "05/2020",
 			"infoList": [
 				"Contracted ADA Remediation for MasterCard In Control Application",
 				"Contracted ADA Remediation for Clover POS Systems",
